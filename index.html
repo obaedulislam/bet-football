@@ -75,7 +75,7 @@
 
                             <div class="player-list mt-4">
                                 <ol id="add-player" class="li-color">
-
+                                    <!--Selected player-->
                                 </ol>
                             </div>
                         </div>
@@ -93,13 +93,13 @@
                                         <p class="mb-0">Per Player:</p>
                                     </div>
                                     <div class="col-lg-7 col-7">
-                                        <input id="per-player-budget" class="w-100 bg-transparent px-2 py-1"
+                                        <input id="per-player-expense" class="w-100 bg-transparent px-2 py-1"
                                             type="number" value="1000">
                                     </div>
                                 </div>
                                 <div class="calculate-btn text-center mt-3">
-                                    <button id="player-budget"
-                                        class="btn btn-success w-100 rounded-0 ">Calculate</button>
+                                    <button id="player-budget" class="btn btn-success w-100 rounded-0 "
+                                        onclick="playersExpense()">Calculate</button>
                                 </div>
                             </div>
 
