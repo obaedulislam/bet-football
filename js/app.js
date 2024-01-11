@@ -114,15 +114,50 @@ function addPlayer(element){
         addPlayerList.appendChild(li);
         element.disabled = "true";
     }
+    else{
+        alert("you can't add more than five player")
+    }
 }
 
 /** === Player Expense Calculation  === **/
 function playersExpense(){
-    const singlePlayerExpense = inputExpenseAmount("per-player-expense");
-    const playerList = playerListLength("add-player")
-    const playerExpenseText =  document.querySelector("#players-expense");
+    let singlePlayerExpense = inputExpenseAmount("per-player-expense");
 
-    const playersExpense = playerList * singlePlayerExpense;
-    playerExpenseText.innerText = playersExpense;
-    return playersExpense;
+    // Check Input validation if condition is true
+    if((!isNaN(singlePlayerExpense)) && (singlePlayerExpense >= 0) ){
+        const playerList = playerListLength("add-player")
+        const playerExpenseText =  document.querySelector("#players-expense");
+        const playersExpense = playerList * singlePlayerExpense;
+        playerExpenseText.innerText = playersExpense;
+        return playersExpense;
+    }else{
+        // Error message for wrong Input value in Player Expense input field
+        alert("Please enter only positive number for Per Player cost.");
+        const inputBudgetField = document.getElementById("per-player-expense");
+        inputBudgetField.value = 1000;
+    }
+     
+}
+
+/** === Total Expense Calculation  === **/
+function totalExpense(){
+    const playerExpenseText = document.getElementById("players-expense");
+    const playerExpense = parseFloat(playerExpenseText.innerText);
+    const managerExpense = inputExpenseAmount("manager-budget");
+    const coachExpense = inputExpenseAmount("coach-budget");
+    
+    // Check Input validation if condition is true
+    if(((!isNaN(playerExpense)) && (!isNaN(managerExpense)) && (!isNaN(coachExpense))) && ((playerExpense >= 0) && (managerExpense >= 0) && (coachExpense >=0))){
+        const totalExpenseText = document.getElementById("total-expense");
+        const totalExpense = playerExpense + managerExpense + coachExpense;
+        totalExpenseText.innerText = totalExpense;
+    }else{
+        alert("Please enter only positive number at input");
+        const managerExpenseText = document.getElementById("manager-budget");
+        const coachExpenseText = document.getElementById("coach-budget");
+        managerExpenseText.value = 2000;
+        coachExpenseText.value=4000;
+
+    }
+ 
 }
