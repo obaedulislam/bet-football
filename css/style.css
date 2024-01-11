@@ -1,0 +1,96 @@
+/** === Common CSS Start Here ===**/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: #141414;
+}
+h1{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 60px;
+    color: #FF5E19;
+}
+h2{
+    font-size: 28px;
+    font-weight: 700;
+}
+h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #B3B3B3;
+}
+.li-color{
+    color: #B3B3B3;
+    font-size: 18px;
+}
+li{
+    margin-bottom: 20px;
+}
+li::marker{
+    font-size: 18px;
+    font-weight: 700;
+}
+.common-pad{
+    padding: 80px 0;
+}
+.common-height{
+    min-height: 100%;
+}
+.dark-bg{
+    background-color: #000;
+}
+input{
+    border: 2px solid #fff;
+    color: #fff;
+}
+.brand-bg{
+    background-color: #FF5E19;
+}
+/** === Common CSS End Here ===**/
+
+
+/** === HEADER CSS Start Here ===**/
+header{
+    height: 500px;
+    background-image: url(../images/animated-face.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-color: #000;
+}
+header .player-bg img{
+    width: 95%;
+}
+.head-disc p{
+    font-size: 18px;
+    line-height: 32px;
+}
+.right-head{
+    background-image: url(../images/football.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.head-img img{
+    width: 60%;
+}
+.main-head{
+    background-image:  url(../images/line-marker.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.select-five{
+    background-image: url(../images/title-line.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.single-player{
+    background-color: #000;
+    border: 1px solid #535353;
+}
+/** === HEADER CSS End Here ===**/
